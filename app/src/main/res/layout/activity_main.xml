@@ -6,14 +6,734 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/titleTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:background="#0E234A"
+        android:layout_height="match_parent">
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/menuLO"
+                    android:background="#0B224F"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <ImageView
+                        android:layout_marginTop="38dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_ew"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+                    <ImageView
+                        android:padding="@dimen/dimen8"
+                        app:tint="@color/wi"
+                        android:layout_marginTop="@dimen/dimen24"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/mapsAction"
+                        android:padding="@dimen/dimen8"
+                        app:tint="@color/wi"
+                        android:layout_marginTop="@dimen/dimen24"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_google_maps"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+
+
+                    <ImageView
+                        android:id="@+id/mapsRadarAction"
+                        android:padding="@dimen/dimen8"
+                        app:tint="@color/wi"
+                        android:layout_marginTop="@dimen/dimen24"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_radar"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/actionReport"
+                        android:padding="@dimen/dimen8"
+                        app:tint="@color/wi"
+                        android:layout_marginTop="@dimen/dimen24"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/actionNews"
+                        android:padding="@dimen/dimen8"
+                        app:tint="@color/wi"
+                        android:layout_marginTop="@dimen/dimen24"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/actionSearch"
+                        android:padding="@dimen/dimen8"
+                        app:tint="@color/wi"
+                        android:layout_marginTop="@dimen/dimen24"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_search_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/actionSetting"
+                        android:padding="@dimen/dimen8"
+                        app:tint="@color/wi"
+                        android:layout_marginTop="@dimen/dimen24"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/actionAbout"
+                        android:padding="@dimen/dimen8"
+                        app:tint="@color/wi"
+                        android:layout_marginTop="@dimen/dimen24"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        />
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/testbg"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dimen8"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="สรุปสถานการณ์ฝน"
+                            android:textSize="@dimen/txt16"
+                            android:textColor="#fff"/>
+
+                    </FrameLayout>
+
+
+
+
+
+
+
+                    <FrameLayout
+
+                        android:layout_marginRight="@dimen/dimen24"
+                        android:layout_marginLeft="@dimen/dimen24"
+                        android:background="@drawable/bg_red"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3">
+
+
+                        <View
+                            android:layout_margin="@dimen/dimen8"
+                            android:layout_width="12dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_line_yel"
+                            android:backgroundTint="@color/red"
+                            />
+
+                        <ImageView
+                            android:layout_gravity="right"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="@dimen/dimen24"
+                            android:src="@drawable/rain_tornado"
+                            />
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/dimen24"
+                            android:id="@+id/menu1"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:textColor="@color/wi"
+                                    android:layout_marginLeft="@dimen/dimen12"
+                                    android:textSize="32dp"
+                                    android:text="อพยพ"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"/>
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:id="@+id/stationCountTV"
+                                        android:text="0"
+                                        android:gravity="center"
+                                        android:textColor="@color/wi"
+                                        android:textSize="28dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:text="สถานี"
+                                        android:gravity="bottom"
+                                        android:textColor="@color/wi"
+                                        android:textSize="22sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen24"
+                                        android:id="@+id/countTV"
+                                        android:text="0"
+                                        android:textColor="@color/wi"
+                                        android:textSize="18dp"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:text="หมู่บ้าน"
+                                        android:textColor="@color/wi"
+                                        android:textSize="12sp"
+                                        android:gravity="bottom"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <FrameLayout
+                                android:paddingRight="@dimen/dimen12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_marginBottom="@dimen/dimen8"
+                                    android:layout_gravity="bottom"
+                                    android:textColor="@color/wi"
+                                    android:gravity="right"
+                                    android:text="หมู่บ้าน"
+                                    android:textSize="16sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginTop="@dimen/dimen12"
+                        android:layout_marginRight="@dimen/dimen24"
+                        android:layout_marginLeft="@dimen/dimen24"
+                        android:background="@drawable/bg_yel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3">
+
+
+                        <View
+                            android:layout_margin="@dimen/dimen8"
+                            android:layout_width="12dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_line_yel"/>
+
+                        <ImageView
+                            android:layout_gravity="right"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="@dimen/dimen24"
+                            android:src="@drawable/rain_thunder"
+                            />
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/dimen24"
+                            android:id="@+id/menu2"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:textColor="@color/wi"
+                                    android:layout_marginLeft="@dimen/dimen12"
+                                    android:textSize="32dp"
+                                    android:text="เตรียมพร้อม"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:id="@+id/stationCount2TV"
+                                        android:text="0"
+                                        android:gravity="center"
+                                        android:textColor="@color/wi"
+                                        android:textSize="28dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:text="สถานี"
+                                        android:gravity="bottom"
+                                        android:textColor="@color/wi"
+                                        android:textSize="22sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen24"
+                                        android:id="@+id/count2TV"
+                                        android:text="0"
+                                        android:textColor="@color/wi"
+                                        android:textSize="18dp"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:text="หมู่บ้าน"
+                                        android:textColor="@color/wi"
+                                        android:textSize="12sp"
+                                        android:gravity="bottom"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <FrameLayout
+                                android:paddingRight="@dimen/dimen12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_marginBottom="@dimen/dimen8"
+                                    android:layout_gravity="bottom"
+                                    android:textColor="@color/wi"
+                                    android:gravity="right"
+                                    android:text="หมู่บ้าน"
+                                    android:textSize="16sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginTop="@dimen/dimen12"
+
+                        android:layout_marginRight="@dimen/dimen24"
+                        android:layout_marginLeft="@dimen/dimen24"
+                        android:background="@drawable/bg_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3">
+
+
+                        <View
+                            android:layout_margin="@dimen/dimen8"
+                            android:layout_width="12dp"
+                            android:backgroundTint="@color/green"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_line_yel"/>
+
+                        <ImageView
+                            android:layout_gravity="right"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="@dimen/dimen24"
+                            android:src="@drawable/rain_1"
+                            />
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/dimen24"
+                            android:id="@+id/menu3"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:textColor="@color/wi"
+                                    android:layout_marginLeft="@dimen/dimen12"
+                                    android:textSize="32dp"
+                                    android:text="เฝ้าระวัง"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:id="@+id/stationCount3TV"
+                                        android:text="0"
+                                        android:gravity="center"
+                                        android:textColor="@color/wi"
+                                        android:textSize="28dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:text="สถานี"
+                                        android:gravity="bottom"
+                                        android:textColor="@color/wi"
+                                        android:textSize="22sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen24"
+                                        android:id="@+id/count3TV"
+                                        android:text="0"
+                                        android:textColor="@color/wi"
+                                        android:textSize="18dp"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:text="หมู่บ้าน"
+                                        android:textColor="@color/wi"
+                                        android:textSize="12sp"
+                                        android:gravity="bottom"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <FrameLayout
+                                android:paddingRight="@dimen/dimen12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_marginBottom="@dimen/dimen8"
+                                    android:layout_gravity="bottom"
+                                    android:textColor="@color/wi"
+                                    android:gravity="right"
+                                    android:text="หมู่บ้าน"
+                                    android:textSize="16sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginTop="@dimen/dimen12"
+
+                        android:layout_marginRight="@dimen/dimen24"
+                        android:layout_marginLeft="@dimen/dimen24"
+                        android:background="@drawable/bg_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3">
+
+
+                        <View
+                            android:layout_margin="@dimen/dimen8"
+                            android:layout_width="12dp"
+                            android:backgroundTint="@color/blue"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_line_yel"/>
+
+                        <ImageView
+                            android:layout_gravity="right"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="@dimen/dimen24"
+                            android:src="@drawable/overcast"
+                            />
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/dimen24"
+                            android:id="@+id/menu4"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:textColor="@color/wi"
+                                    android:layout_marginLeft="@dimen/dimen12"
+                                    android:textSize="32dp"
+                                    android:text="มีฝน"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:id="@+id/stationCount4TV"
+                                        android:text="0"
+                                        android:gravity="center"
+                                        android:textColor="@color/wi"
+                                        android:textSize="28dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:text="สถานี"
+                                        android:gravity="bottom"
+                                        android:textColor="@color/wi"
+                                        android:textSize="22sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen24"
+                                        android:id="@+id/count4TV"
+                                        android:text="0"
+                                        android:textColor="@color/wi"
+                                        android:textSize="18dp"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                    <TextView
+                                        android:layout_marginLeft="@dimen/dimen12"
+                                        android:text="หมู่บ้าน"
+                                        android:textColor="@color/wi"
+                                        android:textSize="12sp"
+                                        android:gravity="bottom"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <FrameLayout
+                                android:paddingRight="@dimen/dimen12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_marginBottom="@dimen/dimen8"
+                                    android:layout_gravity="bottom"
+                                    android:textColor="@color/wi"
+                                    android:gravity="right"
+                                    android:text="หมู่บ้าน"
+                                    android:textSize="16sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+                    </FrameLayout>
+
+
+
+                    <FrameLayout
+                        android:layout_marginBottom="@dimen/dimen16"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/allAction"
+                            android:padding="@dimen/dimen12"
+                            android:drawableTint="#fff"
+                            android:drawableLeft="@drawable/ic_search"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  ดูสถานการณ์ทั้งหมด"
+                            android:textSize="@dimen/txt16"
+                            android:textColor="#fff"/>
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/dimen12"
+                    android:layout_marginTop="36dp"
+                    android:id="@+id/menuAction"
+                    android:src="@drawable/ic_menu"
+                    app:tint="@color/wi" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

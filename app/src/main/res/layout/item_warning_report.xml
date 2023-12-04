@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen8"
+    android:layout_marginTop="@dimen/dimen8"
+    android:layout_marginRight="@dimen/dimen8"
+    android:background="@drawable/bg_black"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen12">
+
+    <!--    -->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical">-->
+    <!--        -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:textColor="@color/wi"
+            android:id="@+id/houseTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ฝน 24 ชั่วโมง"
+            android:textSize="@dimen/txt18" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/numberTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="-8dp"
+            android:layout_marginBottom="-8dp"
+            android:text="213.00"
+            android:textColor="@color/wi"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="มม."
+            android:textColor="@color/wi"
+            android:textSize="@dimen/txt16" />
+
+    </LinearLayout>
+
+
+    <!--        </FrameLayout>-->
+
+
+</LinearLayout>
+

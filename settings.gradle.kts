@@ -3,6 +3,9 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        jcenter()
+
+        maven { url "https://jitpack.io" }
     }
 }
 dependencyResolutionManagement {
@@ -10,9 +13,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+
+        maven { url "https://jitpack.io" }
+
     }
 }
 
 rootProject.name = "EwsDwr"
 include(":app")
- 
+include (":common")

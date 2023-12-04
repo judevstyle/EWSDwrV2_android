@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:descendantFocusability="beforeDescendants"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/searchET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen12"
+        android:layout_marginBottom="@dimen/dimen24"
+        android:background="@drawable/bg_input"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawableTint="@color/blue"
+        android:gravity="center"
+        android:hint="ค้นหา"
+        android:paddingLeft="@dimen/dimen8"
+        android:paddingTop="@dimen/dimen8"
+        android:paddingRight="@dimen/dimen8"
+        android:paddingBottom="@dimen/dimen8"
+        android:textSize="@dimen/txt14" />
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_circular"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/layout_animation"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/action1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dimen24"
+        android:layout_weight="1"
+        android:background="@drawable/bg_yel"
+
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="ภาคตามภูมิศาสตร์\nประเทศไทย"
+            android:textColor="@color/wi"
+            android:textSize="@dimen/txt16" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/action2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dimen24"
+        android:layout_weight="1"
+        android:background="@drawable/bg_yel">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="สำนักงานทรัพยากรน้ำ\nกรมทรัพยากรน้ำ"
+            android:textColor="@color/wi"
+            android:textSize="@dimen/txt16" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

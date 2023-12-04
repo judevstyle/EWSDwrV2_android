@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:background="@drawable/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </View>
+
+
+
+
+        <ImageView
+            android:id="@+id/ss"
+            app:tint="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          />
+
+
+
+
+
+        <FrameLayout
+            android:layout_marginLeft="@dimen/dimen24"
+            android:layout_marginRight="@dimen/dimen24"
+            android:layout_marginTop="@dimen/dimen24"
+            android:layout_marginBottom="@dimen/dimen24"
+            android:background="@drawable/bg_yel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/wi"
+                android:textSize="@dimen/txt14"
+                android:gravity="center|top"
+                android:padding="@dimen/dimen12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/descTV"/>
+
+
+
+
+        </FrameLayout>
+
+
+
+
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

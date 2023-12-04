@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/bgView"
+        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginRight="@dimen/dimen24"
+        android:layout_marginLeft="@dimen/dimen24"
+        android:background="@drawable/bg_yel"
+        android:paddingTop="@dimen/dimen8"
+        android:paddingLeft="@dimen/dimen12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="-4dp"
+            android:layout_marginBottom="-4dp"
+            android:text="บ้านหางนา "
+            android:textSize="@dimen/txt18"
+            android:textColor="@color/wi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleTV" />
+        <TextView
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="-4dp"
+            android:text="บ้านหางนา"
+            android:textSize="@dimen/txt14"
+            android:textColor="@color/wi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt1TV" />
+        <TextView
+            android:layout_marginBottom="-4dp"
+            android:text="บ้านหางนา"
+            android:textSize="@dimen/txt14"
+            android:textColor="@color/wi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt2TV" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_gravity="center|top"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/rain_thunder"/>
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/dimen12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/wi"
+                    android:gravity="center"
+                    android:layout_marginBottom="-4dp"
+                    android:text="ฝนสะสม 12 ชั่วโมง"
+                    android:textSize="@dimen/txt14"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt3TV" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+<!--                    <ImageView-->
+
+<!--                        android:tint="@color/wi"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:padding="@dimen/dimen12"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_width="120dp"-->
+<!--                        android:layout_height="90dp"-->
+<!--                        android:src="@drawable/beaker"/>-->
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="32sp"
+                            android:id="@+id/countTV"
+                            android:textColor="@color/wi"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/unitTV"
+                            android:textColor="@color/wi"/>
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

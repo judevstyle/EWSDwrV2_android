@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:background="@drawable/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </View>
+
+
+
+        <ImageView
+            android:id="@+id/ss"
+            app:tint="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            tools:listitem="@layout/item_warning_report"
+            android:id="@+id/recycleView"
+            android:layout_height="match_parent">
+
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/stateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="การเชื่อมต่อข้อมูลผิดพลาด"
+            android:layout_gravity="center"
+            android:textColor="@color/wi" />
+
+
+
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

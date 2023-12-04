@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen12"
+    android:id="@+id/box"
+    android:background="@drawable/bg_yel"
+    android:layout_marginRight="@dimen/dimen12"
+    android:layout_marginTop="@dimen/dimen12"
+    android:layout_marginLeft="@dimen/dimen12"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/countTV"
+            android:textColor="@color/wi"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cycle_bg"/>
+        <TextView
+            android:id="@+id/titleTV"
+            android:textColor="@color/wi"
+            android:paddingLeft="@dimen/dimen8"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:text="skdmkwmld"
+            android:maxLines="1"
+            android:textSize="@dimen/txt15"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt1TV"
+        android:textColor="@color/wi"
+        android:paddingLeft="@dimen/dimen8"
+        android:gravity="center"
+        android:text="skdmkwmld"
+        android:textSize="@dimen/txt14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+
+        android:id="@+id/txt2TV"
+        android:textColor="#F4E0A6"
+        android:paddingLeft="@dimen/dimen8"
+        android:gravity="center"
+        android:text="skdmkwmld"
+        android:textSize="@dimen/txt10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
