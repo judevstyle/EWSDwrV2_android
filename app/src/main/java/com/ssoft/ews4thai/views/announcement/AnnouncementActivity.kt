@@ -23,13 +23,13 @@ class AnnouncementActivity : BaseActivity() {
     lateinit var binding:ActivityAnnouncementBinding
 
 
-    var tambons: List<TambonData>? = null
+    var stations: List<TambonData>? = null
     var province = ""
     var amphone = ""
     var tambon = ""
     var image = ""
 
-    var tambonData: TambonData? = null
+    var stationData: TambonData? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,11 +50,14 @@ class AnnouncementActivity : BaseActivity() {
             if (province.equals("")){
                 showToast("เลือกจังหวัด")
             }
-            else if (province.equals("")){
+            else if (amphone.equals("")){
                 showToast("เลือกอำเภอ")
             }
-            else if (province.equals("")){
+            else if (tambon.equals("")){
                 showToast("เลือกตำบล")
+            }
+            else if (stationData == null){
+                showToast("เลือกสถานี")
             }
             else if (binding.descET.text.toString().length < 1){
                 showToast("ระบุรายละเอียด")
@@ -64,8 +67,8 @@ class AnnouncementActivity : BaseActivity() {
             }
             else{
 
-                ConectionService.getClient.saveNews(tambonData?.stn?:"",tambonData?.name?:"",tambon,amphone,province,tambonData?.latitude?:0.0
-                    ,tambonData?.longitude?:0.0,binding.descET.text.toString(),image).enqueue(AddNewspi())
+                ConectionService.getClient.saveNews(stationData?.stn?:"",stationData?.name?:"",tambon,amphone,province,stationData?.latitude?:0.0
+                    ,stationData?.longitude?:0.0,binding.descET.text.toString(),image).enqueue(AddNewspi())
 
 
             }
@@ -106,7 +109,6 @@ class AnnouncementActivity : BaseActivity() {
 
                 ConectionService.getClient.tambon_data(selectedItem).enqueue(TambonApi())
 
-
 //                viewModel.slotSelect(p2)
 //                showProgressDialog()
             }
@@ -118,11 +120,15 @@ class AnnouncementActivity : BaseActivity() {
             AdapterView.OnItemClickListener {
             override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 val selectedItem = p0!!.getItemAtPosition(p2) as String
-                tambonData = tambons?.get(p2)
+
+
                 tambon = selectedItem
-                ConectionService.getClient.tambon_data(selectedItem).enqueue(TambonApi())
-                binding.stationTV.text = "${tambons?.get(p2)?.stn} ${tambons?.get(p2)?.name}"
-                Log.e("tm", "${tambons?.get(p2)?.stn} , ${tambons?.get(p2)?.name} , ${tambons?.get(p2)?.latitude}, ${tambons?.get(p2)?.longitude}")
+                ConectionService.getClient.station_data(tambon).enqueue(StationApi())
+
+//                tambon = selectedItem
+//                ConectionService.getClient.tambon_data(selectedItem).enqueue(TambonApi())
+//                binding.stationTV.text = "${tambons?.get(p2)?.stn} ${tambons?.get(p2)?.name}"
+//                Log.e("tm", "${tambons?.get(p2)?.stn} , ${tambons?.get(p2)?.name} , ${tambons?.get(p2)?.latitude}, ${tambons?.get(p2)?.longitude}")
 
 
 //                viewModel.slotSelect(p2)
@@ -130,6 +136,25 @@ class AnnouncementActivity : BaseActivity() {
             }
 
         });
+
+        binding.autoCompleteStation.setOnItemClickListener(object :
+            AdapterView.OnItemClickListener {
+            override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                val selectedItem = p0!!.getItemAtPosition(p2) as String
+//                tambonData = tambons?.get(p2)
+//                tambon = selectedItem
+//                ConectionService.getClient.tambon_data(selectedItem).enqueue(TambonApi())
+//                binding.stationTV.text = "${tambons?.get(p2)?.stn} ${tambons?.get(p2)?.name}"
+//                Log.e("tm", "${tambons?.get(p2)?.stn} , ${tambons?.get(p2)?.name} , ${tambons?.get(p2)?.latitude}, ${tambons?.get(p2)?.longitude}")
+//
+                stationData = stations?.get(p2)
+//                viewModel.slotSelect(p2)
+//                showProgressDialog()
+            }
+
+        });
+
+
 
     }
 
@@ -158,10 +183,11 @@ class AnnouncementActivity : BaseActivity() {
                 response.body()?.let {
 //                    autoCompleteTextView2.setText("เลือกตำบล")
                     binding.autoCompleteTextView1.setText("เลือกอำเภอ")
+                 //   binding.autoCompleteTextView2.setText("เลือกตำบล")
 
                     amphone = ""
                     tambon = ""
-                    binding.stationTV.text = ""
+                   // binding.stationTV.text = ""
 
                     val adapter = ArrayAdapter(
                         this@AnnouncementActivity, R.layout.component_list_item, it
@@ -206,8 +232,11 @@ class AnnouncementActivity : BaseActivity() {
                     binding.autoCompleteTextView1.setText("เลือกอำเภอ")
                     amphone = ""
                     tambon = ""
+                    stationData = null
                     binding.autoCompleteTextView2.setText("เลือกตำบล")
-                    binding.stationTV.text = ""
+                    binding.autoCompleteStation.setText("เลือกสถานี")
+
+                    // binding.stationTV.text = ""
                     val adapter = ArrayAdapter(
                         this@AnnouncementActivity, R.layout.component_list_item, it
                     )
@@ -225,7 +254,60 @@ class AnnouncementActivity : BaseActivity() {
     }
 
 
-    inner class TambonApi() : Callback<List<TambonData>> {
+    inner class TambonApi() : Callback<List<String>> {
+
+
+
+        init {
+            showProgressDialog()
+
+        }
+
+        override fun onFailure(call: Call<List<String>>, t: Throwable) {
+            showToast("err")
+            Log.e("size", "${t.message}")
+
+            hideDialog()
+        }
+
+        override fun onResponse(
+            call: Call<List<String>>,
+            response: Response<List<String>>
+        ) {
+            hideDialog()
+
+            if (response.isSuccessful) {
+                tambon = ""
+                binding.autoCompleteStation.setText("เลือกสถานี")
+                binding.autoCompleteTextView2.setText("เลือกตำบล")
+                stationData = null
+                response.body()?.let {
+//                    tambons = it
+
+                    val arr = ArrayList<String>()
+
+//                    for (data in it) {
+//                        arr.add(data.tambon)
+//
+//                    }
+
+                    val adapter = ArrayAdapter(
+                        this@AnnouncementActivity, R.layout.component_list_item, it
+                    )
+                    binding.autoCompleteTextView2.setAdapter(adapter);
+                    Log.e("AmphoneApi size", "${it.size}")
+                    Log.e("doe", "issii ${it.size}")
+
+//                    taskNew = CallWarning(it).execute()
+
+                }
+
+            }
+        }
+
+    }
+
+    inner class StationApi() : Callback<List<TambonData>> {
 
 
 
@@ -250,19 +332,19 @@ class AnnouncementActivity : BaseActivity() {
             if (response.isSuccessful) {
 
                 response.body()?.let {
-                    tambons = it
+                    stations = it
 
                     val arr = ArrayList<String>()
 
                     for (data in it) {
-                        arr.add(data.tambon)
+                        arr.add(data.name)
 
                     }
 
                     val adapter = ArrayAdapter(
                         this@AnnouncementActivity, R.layout.component_list_item, arr
                     )
-                    binding.autoCompleteTextView2.setAdapter(adapter);
+                    binding.autoCompleteStation.setAdapter(adapter);
                     Log.e("AmphoneApi size", "${it.size}")
                     Log.e("doe", "issii ${it.size}")
 

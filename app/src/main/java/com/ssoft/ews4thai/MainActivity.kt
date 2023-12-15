@@ -17,6 +17,7 @@ import com.ssoft.common.util.LogUtil
 import com.ssoft.common.util.SharedPreferenceUtil
 import com.ssoft.ews4thai.databinding.ActivityMainBinding
 import com.ssoft.ews4thai.views.announcement.AnnouncementActivity
+import com.ssoft.ews4thai.views.info.InfoActivity
 import com.ssoft.ews4thai.views.main.DashbordUi
 import com.ssoft.ews4thai.views.main.MainViewModel
 import com.ssoft.ews4thai.views.map.MapViewActivity
@@ -147,7 +148,10 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this,SearchStationActivity::class.java)
             )
         }
-
+        binding.actionAbout.setOnClickListener {
+            startActivity(Intent(this,InfoActivity::class.java)
+            )
+        }
         binding.allAction.setOnClickListener {
             startActivity(Intent(this,WarningTypeActivity::class.java)
                 .putExtra("status",-1)

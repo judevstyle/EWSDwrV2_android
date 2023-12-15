@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.ssoft.common.util.LogUtil;
 import com.ssoft.ews4thai.R;
 import com.ssoft.ews4thai.data.model.warning.WarningStation;
 import com.ssoft.ews4thai.views.WarningDescActivity;
@@ -29,10 +30,10 @@ public class WarningBottomSheetDialog extends BottomSheetMapsDialog {
     ImageView icon;
     TextView txt1TV;
     TextView txt2TV;
-    TextView countTV;
+    TextView rfTV;
     LinearLayout viewmore;
     TextView txt3TV;
-    TextView pmTV;
+    TextView wlTV;
     TextView unitTV;
 
 
@@ -59,9 +60,9 @@ public class WarningBottomSheetDialog extends BottomSheetMapsDialog {
         titleTV = view.findViewById(R.id.titleTV);
         txt1TV = view.findViewById(R.id.txt1TV);
         txt2TV = view.findViewById(R.id.txt2TV);
-        countTV = view.findViewById(R.id.countTV);
+        rfTV = view.findViewById(R.id.rfTV);
         txt3TV = view.findViewById(R.id.txt3TV);
-        pmTV = view.findViewById(R.id.pm2_5TV);
+        wlTV = view.findViewById(R.id.wlTV);
         unitTV = view.findViewById(R.id.unitTV);
 
         viewmore = view.findViewById(R.id.viewmore);
@@ -73,27 +74,58 @@ public class WarningBottomSheetDialog extends BottomSheetMapsDialog {
 
 
 //        if ()
-        pmTV.setText("pm2.5 : "+data.getPm25());
 
 
         DecimalFormat df = new DecimalFormat("0.0");
-        countTV.setText(data.getRain_value()+"");
+        rfTV.setText(data.getRain_value()+"");
 
 
-        if (data.getWarning_type().equals("rain")) {
-            unitTV.setText("มม.");
-            txt3TV.setText("ปริมาณน้ำฝน");
+
+//        if (data.getStn_type().equals("wl")){
+//            wlTV.setText("ค่าระดับน้ำล่าสุด = : "+data.getWl());
+//
+//        }else {
+//            wlTV.setText("");
+//
+//        }
+
+//        if (data.getWarning_type().equals("rain")) {
+//            unitTV.setText("มม.");
+//            txt3TV.setText("ปริมาณน้ำฝน");
 
 
+//        }else {
+//            unitTV.setText("ม.");
+//            txt3TV.setText("ระดับน้ำ");
+////            countTV.setText(df.format(Double.parseDouble(data.getWarn_wl())));
+//
+//        }
+
+        LogUtil.INSTANCE.showLogError("getWarn_type","{}"+data.getWarn_type());
+        if (data.getShow_status() == 9 || data.getShow_status() == -999 || data.getShow_status() == 0){
+
+            rfTV.setText(data.getRain12h()+" มม.");
+            wlTV.setText("");
+            if (data.getStn_type().equals("wl")) {
+                wlTV.setText(data.getWl()+" ม.");
+            } else {
+                wlTV.setText("ไม่มีข้อมูล");
+
+            }
         }else {
-            unitTV.setText("ม.");
-            txt3TV.setText("ระดับน้ำ");
-//            countTV.setText(df.format(Double.parseDouble(data.getWarn_wl())));
 
-        }
+            rfTV.setText(data.getWarn_rf_v()+" มม.");
+            wlTV.setText("");
 
-        if (data.getWarn_type() == 9 || data.getWarn_type() == -999){
-            countTV.setText(data.getRain12h()+"");
+            if (data.getStn_type().equals("wl")) {
+                wlTV.setText(data.getWarn_wl()+" ม.");
+            } else {
+                wlTV.setText("ไม่มีข้อมูล");
+
+            }
+
+
+
         }
 
         viewmore.setOnClickListener(

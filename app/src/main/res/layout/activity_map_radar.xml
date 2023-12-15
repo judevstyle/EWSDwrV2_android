@@ -47,7 +47,7 @@
                     android:layout_gravity="center"
                     android:src="@drawable/rain_thunder" />
 
-                <TextView
+                <com.ssoft.common.widget.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -82,7 +82,7 @@
                     android:layout_gravity="center"
                     android:src="@drawable/overcast" />
 
-                <TextView
+                <com.ssoft.common.widget.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -140,7 +140,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -153,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/dimen12"
-                android:max="800"
+                android:max="1000"
                 android:min="1"
                 android:progress="12" />
 

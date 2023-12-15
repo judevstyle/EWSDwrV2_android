@@ -40,7 +40,14 @@ interface ServiceAPI {
     @GET("api/tambon_data.php")
     fun tambon_data(
         @Query("amphoe") amphoe:String
+    ): Call<List<String>>
+
+
+    @GET("api/station_data.php")
+    fun station_data(
+        @Query("tambon") tambon:String
     ): Call<List<TambonData>>
+
 
     @GET("api/searchStation.php")
     fun searchStation(
@@ -78,6 +85,10 @@ interface ServiceAPI {
         @QueryMap body:Map<String,String>
     ): WarningStationMapResponse
 
+    @GET("warning_map_data.php")
+    suspend fun warning_map_data(
+        @QueryMap body:Map<String,String>
+    ): WarningStationMapResponse
 
     @GET("warning_radar_service.php")
     suspend fun warning_radar_service(

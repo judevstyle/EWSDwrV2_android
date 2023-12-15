@@ -43,7 +43,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="@dimen/dimen16">
 
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:id="@+id/titleTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                     android:src="@drawable/ic_music_and_multimedia"
                     app:tint="@color/wi" />
 
-                <TextView
+                <com.ssoft.common.widget.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -94,14 +94,14 @@
                     android:layout_height="wrap_content">
 
 
-                    <TextView
+                    <com.ssoft.common.widget.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="OFF"
                         android:textColor="@color/wi"
                         android:textSize="10sp" />
 
-                    <TextView
+                    <com.ssoft.common.widget.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"

@@ -43,7 +43,7 @@
             android:background="@drawable/bg_yel"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:textColor="@color/wi"
                 android:textSize="@dimen/txt14"
                 android:gravity="center|top"

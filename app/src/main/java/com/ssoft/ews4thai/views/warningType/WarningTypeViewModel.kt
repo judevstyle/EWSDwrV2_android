@@ -54,7 +54,7 @@ class WarningTypeViewModel(val mapViewRepository: MapViewRepository) : ViewModel
                 dataResp.value = MapsDataUi.onSuccess(resp)
 
                 for (item in resp.data!!){
-                    LogUtil.showLogError("ssdw","${item.rain_value}")
+                    LogUtil.showLogError("ssdw","${item.rain_value}--${item.warn_rf_v}")
                 }
             }
 

@@ -38,7 +38,7 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:visibility="gone"
             android:id="@+id/stateTV"
             android:layout_width="wrap_content"

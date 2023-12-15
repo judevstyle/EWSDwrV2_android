@@ -161,6 +161,7 @@ class MapViewActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerCl
                     val t2 = resources.getDrawable(R.drawable.ic_pin_type2,null)
                     val t3 = resources.getDrawable(R.drawable.ic_pin_type3,null)
                     val t9 = resources.getDrawable(R.drawable.ic_pin_type4,null)
+                    val t999 = resources.getDrawable(R.drawable.pin_gray,null)
 
 
 
@@ -169,6 +170,8 @@ class MapViewActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerCl
                             1->t3
                             2->t2
                             3->t1
+                            -999->t999
+
                             else->t9
 
                         }

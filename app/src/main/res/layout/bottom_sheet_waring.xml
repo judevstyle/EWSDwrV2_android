@@ -3,19 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp">
 
 
+<!--    android:background="@drawable/bg_yel"-->
 
     <LinearLayout
-        android:background="@drawable/bg_yel"
         android:paddingTop="@dimen/dimen8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:layout_marginTop="-4dp"
             android:layout_marginBottom="-4dp"
             android:text="บ้านหางนา "
@@ -23,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/titleTV" />
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-4dp"
             android:text="บ้านหางนา"
@@ -31,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txt1TV" />
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:text="บ้านหางนา"
@@ -59,7 +60,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@drawable/rain_thunder"/>
-                <TextView
+                <com.ssoft.common.widget.CustomTextView
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:textSize="12sp"
@@ -71,76 +72,59 @@
 
 
             <LinearLayout
-                android:layout_marginBottom="@dimen/dimen12"
+                android:layout_gravity="bottom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:orientation="vertical">
 
-                <TextView
-                    android:gravity="center"
-                    android:layout_marginBottom="-4dp"
-                    android:text="ปริมาณฝนสะสม"
-                    android:textSize="@dimen/txt14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt3TV" />
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-                    <!--                    <ImageView-->
-
-                    <!--                        android:tint="@color/wi"-->
-                    <!--                        android:scaleType="fitXY"-->
-                    <!--                        android:padding="@dimen/dimen12"-->
-                    <!--                        android:layout_gravity="center"-->
-                    <!--                        android:layout_width="120dp"-->
-                    <!--                        android:layout_height="90dp"-->
-                    <!--                        android:src="@drawable/beaker"/>-->
-                    <LinearLayout
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:textStyle="bold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="32sp"
-                            android:id="@+id/countTV"
-                         />
-                        <TextView
-                            android:layout_marginLeft="@dimen/dimen4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/unitTV"
-                            />
-
-                    </LinearLayout>
-
-
-<!--                    <TextView-->
-<!--                        android:text="2"-->
-<!--                        android:textStyle="bold"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:textSize="32sp"-->
-<!--                        android:id="@+id/countTV"-->
-<!--                        android:layout_gravity="center"-->
-<!--                       />-->
-
-                </FrameLayout>
-
-
-                <TextView
-                    android:id="@+id/pm2_5TV"
+                <LinearLayout
                     android:layout_gravity="right"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12dp"/>
+                    android:orientation="horizontal">
+                    <com.ssoft.common.widget.CustomTextView
+                        android:gravity="right"
+                        android:text="ฝนสะสม 12 ชั่วโมง "
+                        android:textSize="@dimen/txt14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                      />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:gravity="right"
+                        android:layout_marginLeft="@dimen/dimen4"
+                        android:text="100 มม."
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rfTV" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.ssoft.common.widget.CustomTextView
+                        android:gravity="right"
+                        android:text="ระดับน้ำ "
+                        android:textSize="@dimen/txt14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:gravity="right"
+                        android:layout_marginLeft="@dimen/dimen4"
+                        android:text="100 ม."
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wlTV" />
+                </LinearLayout>
+
 
             </LinearLayout>
 

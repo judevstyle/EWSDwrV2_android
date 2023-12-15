@@ -100,6 +100,9 @@ class WarningTypeAdapter(context: Context, val listener: HandleClickListener
                 val df = DecimalFormat("0.00")
                 LogUtil.showLogError("ssdw countTV","${data.rain_value}")
 
+
+
+
                 countTV.text = "${data.rain_value}"
 
                 if (data.warning_type.equals("rain")) {
@@ -132,7 +135,7 @@ class WarningTypeAdapter(context: Context, val listener: HandleClickListener
                             .load(R.drawable.rain_1)
                             .into(icon);
                     }
-                    4 -> {
+                    else -> {
                         bgView.setBackgroundResource(R.drawable.bg_blue)
                         Glide.with(itemsViews.root.context)
                             .load(R.drawable.overcast)

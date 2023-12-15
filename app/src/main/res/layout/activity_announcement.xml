@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:layout_marginTop="@dimen/dimen8"
             android:id="@+id/titleTV"
             android:layout_width="match_parent"
@@ -72,7 +72,7 @@
             android:orientation="vertical">
 
 
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -101,7 +101,7 @@
                     android:text="เลือกจังหวัด" />
 
             </com.google.android.material.textfield.TextInputLayout>
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:layout_marginTop="@dimen/dimen12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:layout_marginTop="@dimen/dimen12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -165,8 +165,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:layout_marginTop="@dimen/dimen12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -174,15 +173,52 @@
                 android:text="สถานี"
                 android:textColor="#fff"
                 android:textSize="@dimen/txt16" />
-            <TextView
-                android:text="-"
-                android:textColor="@color/places_text_white_alpha_87"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sta"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/stationTV"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                <!-- Inside text input layout add
+                      an auto complete text view
+                        and make its input type to none-->
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteStation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:textColor="@color/places_text_white_alpha_87"
+                    android:text="เลือกสถานี" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            <TextView
+
+
+
+
+
+<!--            <com.ssoft.common.widget.CustomTextView-->
+<!--                android:layout_marginTop="@dimen/dimen12"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="สถานี"-->
+<!--                android:textColor="#fff"-->
+<!--                android:textSize="@dimen/txt16" />-->
+<!--            <com.ssoft.common.widget.CustomTextView-->
+<!--                android:text="-"-->
+<!--                android:textColor="@color/places_text_white_alpha_87"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/stationTV"/>-->
+
+
+            <com.ssoft.common.widget.CustomTextView
                 android:layout_marginTop="@dimen/dimen12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -190,15 +226,16 @@
                 android:text="รายละเอียด"
                 android:textColor="#fff"
                 android:textSize="@dimen/txt16" />
-            <EditText
+            <com.ssoft.common.widget.CustomEditText
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:id="@+id/descET"
+                android:textColor="@color/black"
                 android:padding="@dimen/dimen12"
                 android:gravity="top"
                 android:background="@drawable/bg_input"/>
 
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:layout_marginTop="@dimen/dimen12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

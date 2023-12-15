@@ -178,7 +178,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="2">
 
-                        <TextView
+                        <com.ssoft.common.widget.CustomTextView
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/dimen8"
                             android:gravity="center"
@@ -237,7 +237,7 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <com.ssoft.common.widget.CustomTextView
                                     android:textColor="@color/wi"
                                     android:layout_marginLeft="@dimen/dimen12"
                                     android:textSize="32dp"
@@ -252,7 +252,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:id="@+id/stationCountTV"
                                         android:text="0"
@@ -263,7 +263,7 @@
                                         android:layout_height="wrap_content"
                                         />
 
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:text="สถานี"
                                         android:gravity="bottom"
@@ -272,7 +272,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         />
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen24"
                                         android:id="@+id/countTV"
                                         android:text="0"
@@ -282,7 +282,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         />
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:text="หมู่บ้าน"
                                         android:textColor="@color/wi"
@@ -302,7 +302,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <com.ssoft.common.widget.CustomTextView
                                     android:layout_marginBottom="@dimen/dimen8"
                                     android:layout_gravity="bottom"
                                     android:textColor="@color/wi"
@@ -362,7 +362,7 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <com.ssoft.common.widget.CustomTextView
                                     android:textColor="@color/wi"
                                     android:layout_marginLeft="@dimen/dimen12"
                                     android:textSize="32dp"
@@ -374,7 +374,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:id="@+id/stationCount2TV"
                                         android:text="0"
@@ -385,7 +385,7 @@
                                         android:layout_height="wrap_content"
                                         />
 
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:text="สถานี"
                                         android:gravity="bottom"
@@ -394,7 +394,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         />
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen24"
                                         android:id="@+id/count2TV"
                                         android:text="0"
@@ -404,7 +404,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         />
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:text="หมู่บ้าน"
                                         android:textColor="@color/wi"
@@ -424,7 +424,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <com.ssoft.common.widget.CustomTextView
                                     android:layout_marginBottom="@dimen/dimen8"
                                     android:layout_gravity="bottom"
                                     android:textColor="@color/wi"
@@ -486,7 +486,7 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <com.ssoft.common.widget.CustomTextView
                                     android:textColor="@color/wi"
                                     android:layout_marginLeft="@dimen/dimen12"
                                     android:textSize="32dp"
@@ -498,7 +498,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:id="@+id/stationCount3TV"
                                         android:text="0"
@@ -509,7 +509,7 @@
                                         android:layout_height="wrap_content"
                                         />
 
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:text="สถานี"
                                         android:gravity="bottom"
@@ -518,7 +518,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         />
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen24"
                                         android:id="@+id/count3TV"
                                         android:text="0"
@@ -528,7 +528,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         />
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:text="หมู่บ้าน"
                                         android:textColor="@color/wi"
@@ -548,7 +548,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <com.ssoft.common.widget.CustomTextView
                                     android:layout_marginBottom="@dimen/dimen8"
                                     android:layout_gravity="bottom"
                                     android:textColor="@color/wi"
@@ -610,7 +610,7 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <com.ssoft.common.widget.CustomTextView
                                     android:textColor="@color/wi"
                                     android:layout_marginLeft="@dimen/dimen12"
                                     android:textSize="32dp"
@@ -622,7 +622,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:id="@+id/stationCount4TV"
                                         android:text="0"
@@ -633,7 +633,7 @@
                                         android:layout_height="wrap_content"
                                         />
 
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:text="สถานี"
                                         android:gravity="bottom"
@@ -642,7 +642,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         />
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen24"
                                         android:id="@+id/count4TV"
                                         android:text="0"
@@ -652,7 +652,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         />
-                                    <TextView
+                                    <com.ssoft.common.widget.CustomTextView
                                         android:layout_marginLeft="@dimen/dimen12"
                                         android:text="หมู่บ้าน"
                                         android:textColor="@color/wi"
@@ -672,7 +672,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <com.ssoft.common.widget.CustomTextView
                                     android:layout_marginBottom="@dimen/dimen8"
                                     android:layout_gravity="bottom"
                                     android:textColor="@color/wi"
@@ -701,7 +701,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="2">
 
-                        <TextView
+                        <com.ssoft.common.widget.CustomTextView
                             android:id="@+id/allAction"
                             android:padding="@dimen/dimen12"
                             android:drawableTint="#fff"

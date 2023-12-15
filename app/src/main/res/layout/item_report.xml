@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:id="@+id/countTV"
             android:textColor="@color/wi"
             android:layout_gravity="center"
@@ -27,7 +27,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/cycle_bg"/>
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:id="@+id/titleTV"
             android:textColor="@color/wi"
             android:paddingLeft="@dimen/dimen8"
@@ -42,7 +42,7 @@
 
     </LinearLayout>
 
-    <TextView
+    <com.ssoft.common.widget.CustomTextView
         android:id="@+id/txt1TV"
         android:textColor="@color/wi"
         android:paddingLeft="@dimen/dimen8"
@@ -51,7 +51,7 @@
         android:textSize="@dimen/txt14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <TextView
+    <com.ssoft.common.widget.CustomTextView
 
         android:id="@+id/txt2TV"
         android:textColor="#F4E0A6"

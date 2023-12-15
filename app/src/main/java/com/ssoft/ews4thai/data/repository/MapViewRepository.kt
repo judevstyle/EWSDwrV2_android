@@ -21,7 +21,7 @@ class MapViewImpt(val serviceAPI: ServiceAPI):MapViewRepository{
     }
 
     override suspend fun warning(body: Map<String, String>): WarningStationMapResponse {
-        return serviceAPI.warning(body)
+        return serviceAPI.warning_map_data(body)
     }
 
 

@@ -170,7 +170,7 @@ class WarningAdapter(context: Context, val listener: HandleClickListener
                 desc2TV.setText("หมู่บ้านครอบคลุมจำนวน ${data.stn_cover} หมู่บ้าน");
 
 
-                if (data.warn_type == 9 || data.warn_type == -999) {
+                if (data.show_status == 9 || data.show_status == -999 || data.show_status == 0) {
                     totalTV.setText(data.rain12h + "")
                 }else
                     totalTV.text = "${data.warn_rf_v}"
@@ -178,7 +178,7 @@ class WarningAdapter(context: Context, val listener: HandleClickListener
 
                 when (data.show_status.toInt()) {
 
-                    1 -> {
+                    3 -> {
 //                        bgView.setBackgroundResource(R.drawable.bg_red)
                         Glide.with(itemsViews.root.context)
                             .load(R.drawable.rain_tornado)
@@ -192,7 +192,7 @@ class WarningAdapter(context: Context, val listener: HandleClickListener
                             .into(icon);
                     }
 
-                    3 -> {
+                    1 -> {
 //                        bgView.setBackgroundResource(R.drawable.bg_green)
                         Glide.with(itemsViews.root.context)
                             .load(R.drawable.rain_1)

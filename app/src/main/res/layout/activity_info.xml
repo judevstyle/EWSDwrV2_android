@@ -43,7 +43,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="@dimen/dimen16">
 
-            <TextView
+            <com.ssoft.common.widget.CustomTextView
                 android:id="@+id/titleTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,16 +58,16 @@
         </FrameLayout>
 
 
-<!--        <com.mindorks.placeholderview.ExpandablePlaceHolderView-->
+        <androidx.recyclerview.widget.RecyclerView
 
-<!--            android:id="@+id/expandableView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_marginLeft="@dimen/dimen24"-->
-<!--            android:layout_marginTop="66dp"-->
-<!--            android:layout_marginRight="@dimen/dimen24"-->
-<!--            android:layout_marginBottom="@dimen/dimen24"-->
-<!--            android:scrollbars="vertical" />-->
+            android:id="@+id/expandableView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen24"
+            android:layout_marginTop="66dp"
+            android:layout_marginRight="@dimen/dimen24"
+            android:layout_marginBottom="@dimen/dimen24"
+            android:scrollbars="vertical" />
 
 
     </FrameLayout>

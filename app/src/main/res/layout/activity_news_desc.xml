@@ -54,7 +54,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4">
-                    <TextView
+                    <com.ssoft.common.widget.CustomTextView
                         android:id="@+id/titlesTV"
                         android:textColor="@color/wi"
                         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                         android:textSize="@dimen/txt18"
                         android:text="บ้านวังปประจัน"
                         android:gravity="center"/>
-                    <TextView
+                    <com.ssoft.common.widget.CustomTextView
                         android:id="@+id/txt1TV"
                         android:textColor="#D27E10"
                         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                         android:textSize="@dimen/txt15"
                         android:text="บ้านวังปประจัน"
                         android:gravity="center"/>
-                    <TextView
+                    <com.ssoft.common.widget.CustomTextView
                         android:id="@+id/txt2TV"
                         android:textColor="#D27E10"
                         android:layout_width="match_parent"

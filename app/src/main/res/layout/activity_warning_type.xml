@@ -39,7 +39,7 @@
             android:layout_height="60dp"
             >
 
-            <TextView
+           <com.ssoft.common.widget.CustomTextView
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_width="match_parent"

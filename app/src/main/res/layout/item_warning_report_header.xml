@@ -24,14 +24,14 @@
         android:orientation="vertical">
 
 
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:textColor="@color/wi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="ปริมาณฝนสะสม"
             android:textSize="12sp" />
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:layout_marginTop="-2dp"
 
             android:textColor="@color/wi"
@@ -41,7 +41,7 @@
             android:layout_gravity="center"
             android:text="XXX"
             android:textSize="28sp" />
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:layout_marginTop="-4dp"
 
             android:textColor="@color/wi"
@@ -51,7 +51,7 @@
             android:layout_gravity="center"
             android:text="XXX"
             android:textSize="@dimen/txt16" />
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:textColor="@color/wi"
             android:id="@+id/descTV"
             android:textSize="12sp"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="XXX" />
-        <TextView
+        <com.ssoft.common.widget.CustomTextView
             android:textColor="@color/wi"
             android:id="@+id/desc2TV"
             android:layout_width="match_parent"
