@@ -45,7 +45,7 @@ data class WarningStation(
     val wl: String,
     val wl07h: String,
     val rain_value:Double,
-    val stn_type:String
+    val stn_type:String=""
 
 ):Parcelable
 

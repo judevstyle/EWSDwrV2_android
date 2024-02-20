@@ -3,10 +3,12 @@ package com.taitos.testpjk.helper
 import android.Manifest
 import android.app.Activity
 import android.app.Dialog
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
@@ -15,6 +17,7 @@ import android.view.View
 import androidx.lifecycle.lifecycleScope
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.NonNull
 import androidx.core.content.FileProvider
@@ -91,7 +94,17 @@ class ImageCropChoosBottomSheetAction(val type: ImageRatio) : BottomSheetDialogF
 
 
         binding.menuBottomSheetImg.setOnClickListener {
-            openGalleryWithPermissionCheck()
+//            openGalleryWithPermissionCheck()
+
+
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+                openGalleryWithPermissionCheck()
+            } else {
+//                openGallery33WithPermissionCheck()
+                launchPickerSingleMode()
+            }
+
+
 
 
         }
@@ -143,6 +156,45 @@ class ImageCropChoosBottomSheetAction(val type: ImageRatio) : BottomSheetDialogF
 
     }
 
+    @NeedsPermission(Manifest.permission.READ_MEDIA_IMAGES)
+    fun openGallery33() {
+
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "image/*"
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+        intent.addCategory(Intent.CATEGORY_OPENABLE)
+        startActivityForResult(intent, PICK_IMAGE_REQUEST)
+
+    }
+
+
+    private fun launchPickerSingleMode() {
+//        type ?: return
+
+        try {
+            startForSingleModeResult.launch(
+                PickVisualMediaRequest.Builder().setMediaType(ActivityResultContracts.PickVisualMedia.ImageOnly).build()
+            )
+        } catch (ex: ActivityNotFoundException) {
+//            showToast(ex.localizedMessage ?: "error")
+        }
+    }
+
+    private val startForSingleModeResult =
+        registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { currentUri ->
+            if (currentUri != null) {
+//                showToast("Selected URI: $currentUri")
+//                handlePickerResponse(currentUri)
+                startCrop(currentUri!!)
+
+                requireActivity().contentResolver.openInputStream(currentUri).use { stream ->
+                    val bitmap = BitmapFactory.decodeStream(stream)
+                    // imageView.setImageBitmap(bitmap)
+                }
+            } else {
+//                showToast("No media selected")
+            }
+        }
 
     private fun getPhotoFile(fileName: String): File {
         val directoryStorage = activity?.getExternalFilesDir(Environment.DIRECTORY_PICTURES)

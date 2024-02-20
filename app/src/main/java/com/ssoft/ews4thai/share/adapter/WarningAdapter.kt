@@ -173,7 +173,22 @@ class WarningAdapter(context: Context, val listener: HandleClickListener
                 if (data.show_status == 9 || data.show_status == -999 || data.show_status == 0) {
                     totalTV.setText(data.rain12h + "")
                 }else
-                    totalTV.text = "${data.warn_rf_v}"
+                    totalTV.text = "${data.rain_value}"
+
+
+//                titleTypeTV
+//                if (data.warning_type.equals("rain"))
+                    titleTypeTV.text = "ปริมาณฝนสะสม"
+//                else
+//                    titleTypeTV.text = "ระดับน้ำ"
+
+
+//                titleTV
+
+
+
+
+
 
 
                 when (data.show_status.toInt()) {

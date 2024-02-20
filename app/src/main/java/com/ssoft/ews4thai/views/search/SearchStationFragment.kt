@@ -235,6 +235,7 @@ class SearchStationFragment : BaseFragment(), HandleClickListener {
                             activity?.finish()
                         } else {
 //                            toolbar.setText("ค้นหา")
+                            LogUtil.showLogError("clear","1")
                             resetView()
                         }
                         state_closeApp = true
@@ -260,10 +261,12 @@ class SearchStationFragment : BaseFragment(), HandleClickListener {
 
                 if (p0.isNullOrEmpty()) {
 
-                    if (state_search) {
-                        resetView()
-
-                    }
+//                    if (state_search) {
+//                        LogUtil.showLogError("clear","2")
+//
+//                        resetView()
+//
+//                    }
 
                 } else {
                     state_search = true
@@ -308,6 +311,8 @@ class SearchStationFragment : BaseFragment(), HandleClickListener {
         binding.searchET!!.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
 //            Log.i(attr.tag, "keyCode: $keyCode")
             if (keyCode == KeyEvent.KEYCODE_BACK && event.action === KeyEvent.ACTION_UP) {
+                LogUtil.showLogError("clear","3")
+
                 resetView()
 
                 return@OnKeyListener true
@@ -394,6 +399,7 @@ class SearchStationFragment : BaseFragment(), HandleClickListener {
 
 
     fun resetView() {
+        LogUtil.showLogError("fc","clear")
         state_search = false
         binding.searchET.hideKeyboard()
         binding.searchET.setText("")

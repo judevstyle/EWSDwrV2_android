@@ -118,7 +118,7 @@ public class WarningBottomSheetDialog extends BottomSheetMapsDialog {
             wlTV.setText("");
 
             if (data.getStn_type().equals("wl")) {
-                wlTV.setText(data.getWarn_wl()+" ม.");
+                wlTV.setText(data.getWarn_wl_v()+" ม.");
             } else {
                 wlTV.setText("ไม่มีข้อมูล");
 
@@ -148,7 +148,7 @@ public class WarningBottomSheetDialog extends BottomSheetMapsDialog {
 
 //        Log.e("ddaction",""+data.getStation().getAction());
         switch (data.getShow_status()) {
-            case 1: {
+            case 3: {
                 Glide.with(getContext())
                         .load(R.drawable.rain_tornado)
                         .into(icon);
@@ -160,7 +160,7 @@ public class WarningBottomSheetDialog extends BottomSheetMapsDialog {
                         .into(icon);
                 break;
             }
-            case 3: {
+            case 1: {
                 Glide.with(getContext())
                         .load(R.drawable.rain_1)
                         .into(icon);

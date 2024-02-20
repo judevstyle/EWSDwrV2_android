@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:id="@+id/titleTypeTV"
             android:text="ปริมาณฝนสะสม"
             android:textSize="12sp" />
         <com.ssoft.common.widget.CustomTextView
