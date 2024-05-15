@@ -20,8 +20,8 @@ android {
         applicationId = "com.ssoft.ews4thai"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 11
+        versionName = "1.3.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

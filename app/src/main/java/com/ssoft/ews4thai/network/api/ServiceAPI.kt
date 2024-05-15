@@ -20,12 +20,7 @@ import retrofit2.http.Query
 import retrofit2.http.QueryMap
 
 interface ServiceAPI {
-
-
-
-
-
-
+    
     @GET("api/province_data.php")
     fun province_data(
     ): Call<List<String>>

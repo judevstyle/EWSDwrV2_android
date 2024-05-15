@@ -17,6 +17,7 @@ import com.ssoft.common.BaseActivity
 import com.ssoft.common.BaseFragment
 import com.ssoft.common.util.LogUtil
 import com.ssoft.ews4thai.R
+import com.ssoft.ews4thai.data.model.warning.WarningStation
 import com.ssoft.ews4thai.databinding.ActivityWarningTypeBinding
 import com.ssoft.ews4thai.share.HandleClickListener
 import com.ssoft.ews4thai.views.WarningDescActivity
@@ -48,6 +49,9 @@ class WarningTypeActivity : BaseActivity() ,HandleClickListener{
 
 
         val status = intent.getIntExtra("status",1)
+
+
+
 
         val type = when(status){
             1 -> TypeEventMap.T1
@@ -106,14 +110,17 @@ class WarningTypeActivity : BaseActivity() ,HandleClickListener{
     }
 
 
-
-
-
     override fun onItemClick(view: View, position: Int, action: Int) {
+
+        LogUtil.showLogError("ddd json","${adapters.items?.size.toString()}")
+        LogUtil.showLogError("ddd json-","${adapters.items!!.get(0).toString()}")
+
+//        val arr = ArrayList<WarningStation>()
+//        arr.add(adapters.items!!.get(0))
 
         startActivity(
             Intent(this, WarningDescActivity::class.java)
-                .putExtra("data",adapters.items )
+                .putExtra("data",adapters.items)
                 .putExtra("index", position)
         )
 
